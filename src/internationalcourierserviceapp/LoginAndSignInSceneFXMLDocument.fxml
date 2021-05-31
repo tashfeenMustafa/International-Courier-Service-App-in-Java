@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="internationalcourierserviceapp.LoginAndSignInSceneFXMLDocumentController">
+   <children>
+      <Text fx:id="signUpAsACustomerText" layoutX="362.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up as a customer" wrappingWidth="172.00001466274261" />
+      <TextField fx:id="customerSignUpNameTextField" layoutX="358.0" layoutY="241.0" prefHeight="41.0" prefWidth="181.0" promptText="Full Name" />
+      <TextField fx:id="customerSignUpEmailTextField" layoutX="358.0" layoutY="288.0" prefHeight="41.0" prefWidth="181.0" promptText="Email" />
+      <PasswordField fx:id="customerSignUpPasswordTextField" layoutX="358.0" layoutY="334.0" prefHeight="41.0" prefWidth="181.0" promptText="Password" />
+      <PasswordField fx:id="customerSignUpRetypePasswordTextField" layoutX="358.0" layoutY="380.0" prefHeight="41.0" prefWidth="181.0" promptText="Retype password" />
+      <Button fx:id="customerSignUpButton" layoutX="358.0" layoutY="441.0" mnemonicParsing="false" onAction="#onCustomerSignUpButtonClick" prefHeight="41.0" prefWidth="181.0" text="Sign up" />
+      <Label fx:id="signUpErrorText" layoutX="358.0" layoutY="530.0" prefHeight="61.0" prefWidth="266.0" />
+      <Text fx:id="userLogInText" layoutX="709.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log in to your account" />
+      <SplitMenuButton fx:id="selectUserTypeMenu" layoutX="709.0" layoutY="239.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="181.0" text="Select user type:">
+        <items>
+          <MenuItem fx:id="customerUserTypeMenuItem" mnemonicParsing="false" onAction="#onCustomerUserTypeMenuItemClick" text="Customer" />
+          <MenuItem fx:id="courierPickupOfficerMenuItem" mnemonicParsing="false" onAction="#onCourierPickupOfficerUserTypeMenuItemClick" text="Courier Pickup Officer" />
+            <MenuItem fx:id="supplyChainOfficerMenuItem" mnemonicParsing="false" onAction="#onSupplyChainOfficerUserTypeMenuItemClick" text="Supply Chain Officer" />
+            <MenuItem fx:id="shippingPortOfficerMenuItem" mnemonicParsing="false" onAction="#onShippingPortOfficerUserTypeMenuItemClick" text="Shipping Port Officer" />
+            <MenuItem fx:id="warehouseManagementOfficerMenuItem" mnemonicParsing="false" onAction="#onWarehouseManagementOfficerUserTypeMenuItemClick" text="Warehouse Management Officer" />
+        </items>
+      </SplitMenuButton>
+      <TextField fx:id="userLoginEmailTextField" layoutX="709.0" layoutY="289.0" prefHeight="41.0" prefWidth="181.0" promptText="Email" />
+      <PasswordField fx:id="userLoginPasswordTextField" layoutX="709.0" layoutY="335.0" prefHeight="41.0" prefWidth="181.0" promptText="Password" />
+      <Button fx:id="userLoginButton" layoutX="709.0" layoutY="392.0" mnemonicParsing="false" onMouseClicked="#onLoginButtonClick" prefHeight="41.0" prefWidth="181.0" text="Log in" />
+      <Label fx:id="logInErrorText" layoutX="709.0" layoutY="462.0" prefHeight="61.0" prefWidth="241.0" />
+   </children>
+</AnchorPane>

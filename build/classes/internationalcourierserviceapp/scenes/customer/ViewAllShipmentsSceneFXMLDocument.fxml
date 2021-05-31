@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="allShipmentsScenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1192.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="internationalcourierserviceapp.scenes.customer.ViewAllShipmentsSceneFXMLDocumentController">
+   <children>
+      <TabPane fx:id="allShipmentsSceneTabPane" prefHeight="800.0" prefWidth="1177.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="viewActiveShipmentsTab" onSelectionChanged="#viewActiveShipmentsTabOnSelection" text="Active Shipments">
+            <content>
+              <AnchorPane fx:id="viewActiveShipmentsAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="740.0" prefWidth="1108.0">
+                     <children>
+                        <TableView fx:id="activeShipmentsTable" prefHeight="535.0" prefWidth="1177.0">
+                          <columns>
+                            <TableColumn fx:id="shipmentNameColumn" prefWidth="64.0" text="Name" />
+                            <TableColumn fx:id="shipmentDescriptionColumn" prefWidth="132.0" text="Description" />
+                              <TableColumn fx:id="recipientDetailsColumn" prefWidth="238.0" text="Recipient Details" />
+                              <TableColumn fx:id="shipmentTrackingIDColumn" prefWidth="175.0" text="Tracking ID" />
+                              <TableColumn fx:id="deliveryDateColumn" prefWidth="101.0" text="Delivery Date" />
+                              <TableColumn fx:id="pickupDateTimeColumn" prefWidth="95.0" text="Pickup Date" />
+                              <TableColumn fx:id="shipmentLocationColumn" prefWidth="180.0" text="Location" />
+                              <TableColumn fx:id="shippingCostColumn" prefWidth="99.0" text="Shipping Cost" />
+                              <TableColumn fx:id="pickupTimeColumn" prefWidth="92.0" text="Pickup Time" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="loadActiveShipmentsButton" layoutX="20.0" layoutY="571.0" mnemonicParsing="false" onMouseClicked="#loadActiveShipmentsButtonOnClick" prefHeight="64.0" prefWidth="279.0" text="Load Active Shipments" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="viewDraftShipmentsTab" text="Draft Shipments">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="draftShipmentsTable" onMouseClicked="#displaySelectedInDraftShipments" prefHeight="502.0" prefWidth="1177.0">
+                          <columns>
+                            <TableColumn fx:id="draftShipmentNameColumn" prefWidth="75.0" text="Name" />
+                            <TableColumn fx:id="draftShipmentDescriptionColumn" prefWidth="171.99996948242188" text="Description" />
+                              <TableColumn fx:id="draftShipmentRecipientDetailsColumn" prefWidth="552.0" text="Recipient Details" />
+                              <TableColumn fx:id="draftShipmentTrackingIDColumn" prefWidth="96.0" text="Tracking ID" />
+                              <TableColumn fx:id="draftShipmentDeliveryDateColumn" prefWidth="95.0" text="Delivery Date" />
+                              <TableColumn fx:id="draftShipmentPickupDateColumn" prefWidth="92.0" text="Pickup Date" />
+                              <TableColumn fx:id="draftShipmentShippingCostColumn" prefWidth="94.0" text="Shipping Cost" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="loadDraftShipmentsButton" layoutX="25.0" layoutY="551.0" mnemonicParsing="false" onMouseClicked="#loadDraftShipmentsButtonOnClick" prefHeight="57.0" prefWidth="265.0" text="Load Draft Shipments" />
+                        <Button fx:id="changeDraftToActiveShipmentButton" layoutX="319.0" layoutY="551.0" mnemonicParsing="false" onMouseClicked="#changeDraftToActiveShipmentButtonOnClick" prefHeight="59.0" prefWidth="381.0" text="Change selected Draft Shipment to Active Shipment" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="viewCompletedShipmentsTab" text="Completed Shipments">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="completedShipmentsTable" prefHeight="418.0" prefWidth="1177.0">
+                          <columns>
+                            <TableColumn fx:id="completedShipmentsNameColumn" prefWidth="83.99996948242188" text="Name" />
+                            <TableColumn fx:id="completedShipmentsDescriptionColumn" prefWidth="162.0" text="Description" />
+                              <TableColumn fx:id="completedShipmentsRecipientDetailsColumn" prefWidth="432.0" text="Recipient Details" />
+                              <TableColumn fx:id="completedShipmentsTrackingIDColumn" prefWidth="213.0" text="Tracking ID" />
+                              <TableColumn fx:id="completedShipmentsDeliveryDateColumn" prefWidth="94.0" text="Delivery Date" />
+                              <TableColumn fx:id="completedShipmentsPickupDateColumn" prefWidth="85.0" text="Pickup Date" />
+                              <TableColumn fx:id="completedShipmentsShippingCostColumn" prefWidth="104.0" text="Shipping Cost" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="loadCompletedShipmentsButton" layoutX="22.0" layoutY="552.0" mnemonicParsing="false" onMouseClicked="#loadCompletedShipmentsButtonOnClick" prefHeight="77.0" prefWidth="319.0" text="Load Completed Shipments" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

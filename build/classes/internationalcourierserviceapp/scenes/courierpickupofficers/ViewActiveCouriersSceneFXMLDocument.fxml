@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="viewActiveShipmentSceneAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1645.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="internationalcourierserviceapp.scenes.courierpickupofficers.ViewActiveCouriersSceneFXMLDocumentController">
+   <children>
+      <TableView fx:id="activeShipmentsForCourierOfficerTable" onMouseClicked="#selectActiveShipment" prefHeight="623.0" prefWidth="1645.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="63.000030517578125" text="Name" />
+          <TableColumn fx:id="descriptionColumn" prefWidth="95.0" text="Description" />
+            <TableColumn fx:id="recipientDetailsColumn" prefWidth="283.0" text="Recipient Details" />
+            <TableColumn fx:id="trackingIdColumn" prefWidth="149.0" text="Tracking ID" />
+            <TableColumn fx:id="weightColumn" prefWidth="106.0" text="Weight(in kg)" />
+            <TableColumn fx:id="assignedWarehouseColumn" prefWidth="239.0" text="Is WarehouseDelivery" />
+            <TableColumn fx:id="assignedShippingPortColumn" prefWidth="227.0" text="Is Shipping Port Delivery" />
+            <TableColumn fx:id="dimensionColumn" minWidth="0.0" prefWidth="293.0" text="Dimension(in cm)">
+               <columns>
+                  <TableColumn fx:id="lengthColumn" prefWidth="76.0" text="Length" />
+                  <TableColumn fx:id="widthColumn" prefWidth="74.0" text="Width" />
+                  <TableColumn fx:id="heightColumn" prefWidth="75.0" text="Height" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="pickupTimeColumn" prefWidth="82.0" text="Pickup Time" />
+            <TableColumn fx:id="pickupDateColumn" prefWidth="83.0" text="Pickup Date" />
+            <TableColumn fx:id="deliveryDateColumn" prefWidth="91.0" text="Delivery Date" />
+        </columns>
+      </TableView>
+      <Button fx:id="updateTableButton" layoutX="36.0" layoutY="677.0" mnemonicParsing="false" onMouseClicked="#updateTableButtonOnClick" prefHeight="56.0" prefWidth="210.0" text="Update Table" />
+      <Button fx:id="flagSelectedAsCourierButton" layoutX="272.0" layoutY="677.0" mnemonicParsing="false" onMouseClicked="#flagSelectedAsCourierButtonOnClick" prefHeight="56.0" prefWidth="221.0" text="Flag as illegal" />
+      <Button fx:id="completeShipmentButton" layoutX="512.0" layoutY="677.0" mnemonicParsing="false" onMouseClicked="#completeShipmentButtonOnClick" prefHeight="56.0" prefWidth="202.0" text="Complete Shipment" />
+   </children>
+</AnchorPane>

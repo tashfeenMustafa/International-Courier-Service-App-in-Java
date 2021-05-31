@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="orderShippingSuppliesAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1045.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="internationalcourierserviceapp.scenes.customer.OrderShippingSuppliesSceneFXMLDocumentController">
+   <children>
+      <SplitPane dividerPositions="0.6663470757430489" prefHeight="800.0" prefWidth="1045.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Text layoutX="33.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shop" />
+                  <Text layoutX="33.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List of all the Shipping Supplies available in bin file and the option to" wrappingWidth="444.2109680175781" />
+                  <Text layoutX="33.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="add them to the cart which is on the right. Each item will show its price, name and have a button to add to cart." wrappingWidth="444.2109680175781" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="594.0" prefWidth="265.0">
+               <children>
+                  <SplitPane orientation="VERTICAL" prefHeight="516.0" prefWidth="344.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="516.0" prefWidth="283.0">
+                           <children>
+                              <ScrollPane prefHeight="514.0" prefWidth="344.0">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="251.0">
+                                       <children>
+                                          <Text layoutX="5.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cart" />
+                                          <Text layoutX="5.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Will show any item added to" />
+                                          <Text layoutX="4.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cart from the shop section." />
+                                          <Text layoutX="5.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="will show individual price " />
+                                          <Text layoutX="5.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="and remove from cart button." />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+                  <AnchorPane layoutX="1.0" layoutY="513.0" minHeight="0.0" minWidth="0.0" prefHeight="286.0" prefWidth="342.0" style="-fx-background-color: #333;">
+                     <children>
+                        <Text fx:id="addedPriceText" fill="WHITE" layoutX="17.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Added Price:" wrappingWidth="80.98307228088379" />
+                        <Text fill="WHITE" layoutX="17.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Price:" wrappingWidth="80.98307228088379" />
+                        <Text fill="WHITE" layoutX="17.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Charge:" wrappingWidth="107.98307228088379" />
+                        <Button fx:id="confirmOrderButton" layoutX="21.0" layoutY="230.0" mnemonicParsing="false" text="Confirm Order" />
+                        <Button layoutX="129.0" layoutY="230.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="108.0" text="Save as Draft" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="735.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.296043656207367" layoutX="-1.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="735.0" prefWidth="936.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="343.0" prefWidth="934.0">
+               <children>
+                  <Text layoutX="44.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create or add to your Address Book:" />
+                  <Text layoutX="45.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add an address of all the places you regularly send shipments to." />
+                  <Text layoutX="45.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Simply adding your first address will create your own personal Address Book below." />
+                  <Button fx:id="createAddressButton" layoutX="45.0" layoutY="134.0" mnemonicParsing="false" onAction="#onCreateAddressButtonClick" text="Create Address" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ScrollPane prefHeight="531.0" prefWidth="934.0">
+                     <content>
+                        <AnchorPane fx:id="addressBookAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="536.0" prefWidth="922.0">
+                           <children>
+                              <Text layoutX="44.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Address Book:" />
+                              <Text layoutX="44.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comment: will show list of clickable addresses here" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <DialogPane layoutX="385.0" layoutY="136.0" prefHeight="542.0" prefWidth="524.0">
+         <content>
+            <Pane fx:id="createAddressDialoguePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="453.0">
+               <children>
+                  <Label layoutX="36.0" layoutY="71.0" text="Title of the Address:" />
+                  <TextField fx:id="addressTitleTextField" layoutX="164.0" layoutY="60.0" onAction="#onAddressTitleTextFieldClick" prefHeight="26.0" prefWidth="308.0" promptText="e.g. John's Home, Marie's Office, Tony's restaurant" />
+                  <Label layoutX="37.0" layoutY="101.0" text="Country:" />
+                  <TextField layoutX="92.0" layoutY="90.0" prefHeight="26.0" prefWidth="378.0" promptText="Country name" />
+                  <Label layoutX="37.0" layoutY="133.0" text="City:" />
+                  <TextField layoutX="70.0" layoutY="120.0" prefHeight="26.0" prefWidth="403.0" promptText="City name" />
+                  <Label layoutX="37.0" layoutY="170.0" text="Town:" />
+                  <TextField layoutX="80.0" layoutY="160.0" prefHeight="26.0" prefWidth="394.0" promptText="Town name (if applicable)" />
+                  <Label layoutX="39.0" layoutY="208.0" text="District:" />
+                  <TextField layoutX="92.0" layoutY="198.0" prefHeight="26.0" prefWidth="378.0" promptText="District name (if applicable)" />
+                  <Label layoutX="38.0" layoutY="245.0" text="State:" />
+                  <TextField layoutX="80.0" layoutY="235.0" prefHeight="26.0" prefWidth="394.0" promptText="State" />
+                  <Label layoutX="38.0" layoutY="282.0" text="Street Address:" />
+                  <TextField layoutX="136.0" layoutY="271.0" prefHeight="26.0" prefWidth="341.0" promptText="e.g. Road no 11, House 223. Gulshan Avenue" />
+                  <Label layoutX="35.0" layoutY="324.0" text="Postal Code:" />
+                  <TextField layoutX="136.0" layoutY="320.0" prefHeight="26.0" prefWidth="344.0" promptText="e.g. 1205, 234221 (if abroad), etc." />
+                  <Button layoutX="98.0" layoutY="408.0" mnemonicParsing="false" text="Save Address" />
+                  <Button layoutX="27.0" layoutY="408.0" mnemonicParsing="false" text="Cancel" />
+               </children>
+            </Pane>
+         </content>
+         <header>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Create an address:" wrappingWidth="365.98307037353516" />
+         </header>
+      </DialogPane>
+   </children>
+</AnchorPane>

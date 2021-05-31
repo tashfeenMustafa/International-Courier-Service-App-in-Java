@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="735.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="internationalcourierserviceapp.scenes.customer.createshipmentscenes.CreateShipmentSceneFXMLDocumentController">
+   <children>
+      <Text layoutX="24.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Shipment" wrappingWidth="123.65886688232422" />
+      <Text layoutX="24.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fill in the shipment details:" wrappingWidth="219.65886688232422" />
+      <Label fx:id="shipmentNameLabel" layoutX="24.0" layoutY="90.0" text="Shipment Name:" />
+      <TextField fx:id="shipmentNameTextField" layoutX="131.0" layoutY="78.0" prefHeight="26.0" prefWidth="351.0" promptText="What is in the shipment?" />
+      <Label fx:id="shipmentDescriptionLabel" layoutX="24.0" layoutY="121.0" text="Shipment Description:" />
+      <TextField fx:id="shipmentDescriptionTextField" layoutX="163.0" layoutY="109.0" prefHeight="26.0" prefWidth="321.0" promptText="Describe the shipment." />
+      <Label fx:id="shipmentWeightLabel" layoutX="24.0" layoutY="153.0" text="Shipment Weight:" />
+      <TextField fx:id="shipmentWeightTextField" layoutX="136.0" layoutY="144.0" prefHeight="26.0" prefWidth="91.0" promptText="in kgs" />
+      <Label fx:id="shipmentDimensionsLabel" layoutX="24.0" layoutY="187.0" text="Shipment Dimensions(in cms):" />
+      <TextField fx:id="shipmentLengthTextField" layoutX="218.0" layoutY="178.0" prefHeight="26.0" prefWidth="79.0" promptText="length" />
+      <Text layoutX="309.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" />
+      <TextField fx:id="shipmentWidthTextField" layoutX="331.0" layoutY="178.0" prefHeight="26.0" prefWidth="79.0" promptText="width" />
+      <Text layoutX="425.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" />
+      <TextField fx:id="shipmentHeightTextField" layoutX="451.0" layoutY="177.0" prefHeight="26.0" prefWidth="79.0" promptText="height" />
+      <Text layoutX="24.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fill in Recipient details:" wrappingWidth="200.99998104572296" />
+      <Label fx:id="recipientNameLabel" layoutX="24.0" layoutY="268.0" text="Name:" />
+      <TextField fx:id="recipientNameTextField" layoutX="68.0" layoutY="257.0" prefHeight="26.0" prefWidth="387.0" promptText="Full name" />
+      <Label fx:id="recipientCountryLabel" layoutX="23.0" layoutY="299.0" text="Country:" />
+      <TextField fx:id="recipientCountryTextField" layoutX="77.0" layoutY="288.0" prefHeight="26.0" prefWidth="379.0" promptText="Recipient's Country" />
+      <Label fx:id="recipientCityLabel" layoutX="23.0" layoutY="331.0" text="City:" />
+      <TextField fx:id="recipientCityTextField" layoutX="54.0" layoutY="320.0" prefHeight="26.0" prefWidth="400.0" promptText="Recipient's City" />
+      <Label fx:id="recipientDistrictLabel" layoutX="23.0" layoutY="366.0" text="District:" />
+      <TextField fx:id="recipientDistrictTextField" layoutX="74.0" layoutY="354.0" prefHeight="26.0" prefWidth="379.0" promptText="Recipient's District" />
+      <Label fx:id="recipientTownLabel" layoutX="24.0" layoutY="400.0" text="Town:" />
+      <TextField fx:id="recipientTownTextField" layoutX="66.0" layoutY="388.0" prefHeight="26.0" prefWidth="387.0" promptText="Recipient's Town (if applicable)" />
+      <Label fx:id="recipientStateLabel" layoutX="25.0" layoutY="438.0" text="State:" />
+      <TextField fx:id="recipientStateTextField" layoutX="64.0" layoutY="426.0" prefHeight="26.0" prefWidth="387.0" promptText="Recipient's State (if applicable)" />
+      <Label fx:id="recipientStreetAddressLabel" layoutX="25.0" layoutY="469.0" text="Street Address:" />
+      <TextField fx:id="recipientStreetAddressTextField" layoutX="121.0" layoutY="458.0" prefHeight="26.0" prefWidth="334.0" promptText="Recipient's Street Address (e.g House 333/C, etc.)" />
+      <Label fx:id="recipientPostalCodeLabel" layoutX="24.0" layoutY="507.0" text="Postal Code:" />
+      <TextField fx:id="recipientPostalCodeTextField" layoutX="104.0" layoutY="496.0" prefHeight="26.0" prefWidth="168.0" promptText="Recipient's Postal Code" />
+      <Text layoutX="24.0" layoutY="564.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schedule Pickup Day and Time:" wrappingWidth="200.99998104572296" />
+      <DatePicker fx:id="shipmentDateTimePicker" layoutX="24.0" layoutY="581.0" />
+      <Button fx:id="confirmShipmentButton" layoutX="23.0" layoutY="641.0" mnemonicParsing="false" onAction="#onConfirmShipmentButtonClick" text="Confirm Shipment" />
+      <Button fx:id="saveAsDraftButton" layoutX="157.0" layoutY="641.0" mnemonicParsing="false" onAction="#onSaveAsDraftButtonText" text="Save As Draft" />
+      <Button fx:id="cancelShipmentButton" layoutX="264.0" layoutY="641.0" mnemonicParsing="false" onAction="#onCancelShipmentButtonClick" text="Cancel Shipment" />
+      <DialogPane fx:id="shipmentNoticecDialoguePane" layoutX="269.0" layoutY="234.0" prefHeight="212.0" prefWidth="427.0">
+         <header>
+            <Text fx:id="shipmentNoticeDialoguePaneText" strokeType="OUTSIDE" strokeWidth="0.0" />
+         </header>
+         <graphic>
+            <Button fx:id="shipmentNoticeDialoguePaneButton" mnemonicParsing="false" onAction="#shipmentNoticeDialoguePaneButton" text="Button" />
+         </graphic>
+      </DialogPane>
+   </children>
+</AnchorPane>
